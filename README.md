@@ -1,15 +1,15 @@
 # <p align=center>Geo-SAM2: Interactive Remote Sensing Segmentation Tool Based on Segment Anything Model 2</p>
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-- [Geo-SAM2: Interactive Remote Sensing Segmentation Tool Based on Segment Anything Model 2](#geo-sam2-interactive-remote-sensing-segmentation-tool-based-on-segment-anything-model-2)
-  - [Introduction](#introduction)
-  - [Installation and Usage](#installation-and-usage)
-  - [Demo](#demo)
-  - [Highlights](#highlights)
-  - [Key Differences Between Geo-SAM2 and Geo-SAM](#key-differences-between-geo-sam2-and-geo-sam)
-  - [Notes](#notes)
-  - [Citation](#citation)
-  - [Acknowledgement](#acknowledgement)
+# Contents
+- [Introduction](#introduction)
+- [Installation and Usage](#installation-and-usage)
+- [Demo](#demo)
+- [Highlights](#highlights)
+- [Key Differences Between Geo-SAM2 and Geo-SAM](#key-differences-between-geo-sam2-and-geo-sam)
+- [Notes](#notes)
+- [Citation](#citation)
+- [Acknowledgement](#acknowledgement)
 
 
 ## Introduction

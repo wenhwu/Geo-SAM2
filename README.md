@@ -95,7 +95,7 @@ If you find this project useful in your research, please consider citing:
 
 This work builds upon:
 - [Geo-SAM](https://github.com/coolzhao/Geo-SAM) by [Zhuoyi Zhao](https://github.com/coolzhao/) and [Chengyan Fan](https://github.com/Fanchengyan) from [Cryosphere Lab](https://cryocuhk.github.io/), ESSC, CUHK;
-- [Segment Anything Model (SAM)](https://github.com/facebookresearch/segment-anything) and [SAM2](https://github.com/facebookresearch/sam2) by Meta AI;
+- [SAM](https://github.com/facebookresearch/segment-anything) and [SAM2](https://github.com/facebookresearch/sam2) by Meta AI;
 - [QGIS](https://github.com/qgis/QGIS) for the powerful, open-source GIS platform.
 
 We thank the developers of these projects for their foundational contributions.

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/Geo-SAM2/ui/image/" >
+        <file>geo_sam2.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,13 @@
+[general]
+name=Geo-SAM2
+description=Interactive Remote Sensing Segmentation Tool Based on Segment Anything Model 2 
+about=Interactive segmentation of remote sensing imagery using SAM2
+category=Raster
+version=0.1.0
+qgisMinimumVersion=3.40
+author=Wu Wenhui, Wang Mengmeng 
+email=wenhwu@126.com
+tags=raster, interactive-segmentation, segment-anything, labeling
+icon=ui/icons/geo_sam_tool.svg
+hasProcessingProvider=yes
+

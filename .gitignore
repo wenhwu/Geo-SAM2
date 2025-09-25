@@ -1,0 +1,8 @@
+**/*.pyc
+.DS_Store
+.vscode/settings.json
+.tmp.driveupload/*
+docs/build
+ui/config/user.json
+tmp_folder/
+checkpoints/*.pt

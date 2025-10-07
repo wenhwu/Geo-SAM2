@@ -5,16 +5,19 @@
 
 ## Contents
 
-- [Installation](#installation)
-  - [Install QGIS](#install-qgis)
-  - [Download the Geo-SAM2 Plugin](#download-the-geo-sam2-plugin)
-  - [Configure the Plugin Folder](#configure-the-plugin-folder)
-  - [Activate the Geo-SAM2 Plugin](#activate-the-geo-sam2-plugin)
-- [Usage](#usage)
-  - [Geo-SAM2 Image Encoder](#geo-sam2-image-encoder)
-    - [Download SAM2 Checkpoints](#download-sam2-checkpoints)
-    - [Running the Geo-SAM2 Image Encoder](#running-the-geo-sam2-image-encoder)
-  - [Geo-SAM2 Interactive Segmentation](#geo-sam2-interactive-segmentation)
+- [Installation and Usage](#installation-and-usage)
+  - [Contents](#contents)
+  - [Installation](#installation)
+    - [Install QGIS](#install-qgis)
+    - [Required Dependencies for Installing Geo-SAM2](#required-dependencies-for-installing-geo-sam2)
+    - [Download the Geo-SAM2 Plugin](#download-the-geo-sam2-plugin)
+    - [Configure the Plugin Folder](#configure-the-plugin-folder)
+    - [Activate the Geo-SAM2 Plugin](#activate-the-geo-sam2-plugin)
+  - [Usage](#usage)
+    - [Geo-SAM2 Image Encoder](#geo-sam2-image-encoder)
+      - [Download SAM2 Checkpoints](#download-sam2-checkpoints)
+      - [Running the Geo-SAM2 Image Encoder](#running-the-geo-sam2-image-encoder)
+    - [Geo-SAM2 Interactive Segmentation](#geo-sam2-interactive-segmentation)
 
 
 ## Installation
@@ -26,6 +29,210 @@ This section provides a step-by-step guide for installing the Geo-SAM2 plugin fo
 First, it is necessary to download and install the QGIS software. You can obtain the installer from the official QGIS website: [https://qgis.org/download/](https://qgis.org/download/).
 
 **Version Requirement:** The installed version of QGIS must be `3.40.11` or higher. It is highly recommended to use the **Long Term Release (LTR)** version, specifically `3.40 LTR for Windows`. The LTR version provides enhanced stability and long-term support, which is ideal for academic and professional work.
+
+### Required Dependencies for Installing Geo-SAM2
+
+First, install NVIDIA **CUDA** and **cuDNN**.
+
+Next, launch the **OSGeo4W Shell** from the Start menu **as Administrator**, this is the dedicated command-line environment for QGIS, and execute the following steps:
+
+- Install `torch` and `torchvision` using the official PyTorch installation commands for specific versions: [Installing Previous Versions of PyTorch](https://pytorch.org/get-started/previous-versions/).  
+- Install **SAM 2** following the instructions in the official repository: [SAM 2](https://github.com/facebookresearch/sam2).
+
+Finally, install any additional dependencies as needed.  
+- **Missing dependencies will typically be reported as import errors when running the plugin**; install them accordingly.  
+- **For reference only**, the complete list of library versions used in my QGIS environment is provided below:
+
+  ```
+  Package                     Version            Editable project location
+  --------------------------- ------------------ ----------------------------------------------------------------------
+  absl-py                     2.3.1
+  aenum                       3.1.15
+  affine                      2.4.0
+  aiohappyeyeballs            2.6.1
+  aiohttp                     3.11.13
+  aiosignal                   1.3.2
+  annotated-types             0.7.0
+  antlr4-python3-runtime      4.9.3
+  asttokens                   2.4.1
+  attrs                       25.2.0
+  autocommand                 2.2.2
+  backports.tarfile           1.2.0
+  bitsandbytes                0.45.3
+  black                       25.1.0
+  certifi                     2024.2.2
+  chardet                     5.2.0
+  charset-normalizer          3.3.2
+  click                       8.1.8
+  click-plugins               1.1.1
+  cligj                       0.7.2
+  cloudpickle                 3.1.1
+  colorama                    0.4.6
+  coloredlogs                 15.0.1
+  contourpy                   1.2.1
+  cycler                      0.12.1
+  cypari                      2.5.5
+  decorator                   5.1.1
+  docstring_parser            0.16
+  efficientnet_pytorch        0.7.1
+  einops                      0.8.1
+  et_xmlfile                  1.1.0
+  executing                   2.1.0
+  ExifRead                    3.0.0
+  filelock                    3.13.1
+  fiona                       1.10.1
+  flatbuffers                 25.2.10
+  fonttools                   4.51.0
+  frozenlist                  1.5.0
+  fsspec                      2024.6.1
+  future                      1.0.0
+  FXrays                      1.3.5
+  GDAL                        3.10.2
+  geographiclib               2.0
+  geopandas                   1.0.1
+  grpcio                      1.74.0
+  httplib2                    0.22.0
+  huggingface-hub             0.29.3
+  humanfriendly               10.0
+  hydra-core                  1.3.2
+  idna                        3.7
+  importlib_metadata          8.0.0
+  importlib_resources         6.5.2
+  inflect                     7.3.1
+  iopath                      0.1.10
+  ipython                     8.28.0
+  jaraco.collections          5.1.0
+  jaraco.context              5.3.0
+  jaraco.functools            4.0.1
+  jaraco.text                 3.12.1
+  jedi                        0.19.1
+  Jinja2                      3.1.3
+  jsonargparse                4.37.0
+  kiwisolver                  1.4.5
+  knot-floer-homology         1.2
+  kornia                      0.8.0
+  kornia_rs                   0.1.8
+  lightly                     1.5.19
+  lightly-utils               0.0.2
+  lightning                   2.5.0.post0
+  lightning-utilities         0.14.0
+  low-index                   1.2
+  lxml                        5.3.0
+  Mako                        1.3.9
+  Markdown                    3.8.2
+  markdown-it-py              3.0.0
+  MarkupSafe                  2.1.5
+  matplotlib                  3.10.0
+  matplotlib-inline           0.1.7
+  mdurl                       0.1.2
+  mock                        5.1.0
+  more-itertools              10.3.0
+  mpmath                      1.3.0
+  multidict                   6.1.0
+  munch                       4.0.0
+  mypy_extensions             1.1.0
+  networkx                    3.4.1
+  ninja                       1.11.1.4
+  nose2                       0.14.1
+  numpy                       1.26.4
+  omegaconf                   2.3.0
+  opencv-python               4.8.0.74
+  openpyxl                    3.1.2
+  orjson                      3.11.2
+  OWSLib                      0.32.0
+  packaging                   25.0
+  pandas                      2.2.2
+  parso                       0.8.4
+  pathspec                    0.12.1
+  pillow                      11.1.0
+  pip                         25.0
+  platformdirs                4.3.6
+  plink                       2.4.2
+  plotly                      5.20.0
+  ply                         3.11
+  portalocker                 3.2.0
+  pretrainedmodels            0.7.4
+  prompt_toolkit              3.0.48
+  propcache                   0.3.0
+  protobuf                    6.30.0
+  psycopg2                    2.9.10
+  pure_eval                   0.2.3
+  pyarrow                     18.1.0
+  pycocotools                 2.0.10
+  pycuda                      2025.1
+  pydantic                    2.10.6
+  pydantic_core               2.27.2
+  Pygments                    2.17.2
+  pyodbc                      5.1.0
+  pyogrio                     0.9.0
+  PyOpenGL                    3.1.7
+  pyparsing                   3.1.2
+  PyPDF2                      3.0.1
+  pypiwin32                   223
+  pypng                       0.20220715.0
+  pyproj                      3.7.0
+  PyQt5                       5.15.11
+  PyQt5_sip                   12.16.1
+  pyreadline3                 3.5.4
+  pyserial                    3.5
+  python-dateutil             2.9.0.post0
+  pytools                     2025.1.1
+  pytz                        2024.1
+  pyvers                      0.1.0
+  pywin32                     306
+  PyYAML                      6.0.1
+  rasterio                    1.4.3
+  remotior_sensus             0.4.4
+  reportlab                   4.2.5
+  requests                    2.31.0
+  rich                        13.9.4
+  rtree                       1.4.1
+  safetensors                 0.5.3
+  SAM-2                       1.0                C:\Program Files\QGIS 3.40.4\apps\Python312\Lib\site-packages\sam2
+  scipy                       1.13.0
+  segment-anything            1.0
+  segmentation_models_pytorch 0.4.0
+  setuptools                  75.8.0
+  shapely                     2.0.6
+  simplejson                  3.19.2
+  sip                         6.9.1
+  six                         1.16.0
+  snappy                      3.1.1
+  snappy-manifolds            1.2
+  spherogram                  2.2.1
+  stack-data                  0.6.3
+  sympy                       1.13.1
+  tabulate                    0.9.0
+  tenacity                    8.2.3
+  tensorboard                 2.20.0
+  tensorboard-data-server     0.7.2
+  tensorboardX                2.6.2.2
+  tensordict                  0.9.1
+  tensorrt                    10.0.1
+  termcolor                   3.1.0
+  timm                        1.0.15
+  tomli                       2.0.1
+  torch                       2.6.0+cu118
+  torchmetrics                1.6.2
+  torchvision                 0.21.0+cu118
+  tqdm                        4.67.1
+  traitlets                   5.14.3
+  typeguard                   4.3.0
+  typeshed_client             2.7.0
+  typing_extensions           4.12.2
+  tzdata                      2024.1
+  urllib3                     2.2.1
+  wcwidth                     0.2.13
+  Werkzeug                    3.1.3
+  wheel                       0.43.0
+  wxPython                    4.2.2
+  xlrd                        2.0.1
+  xlwt                        1.3.0
+  yacs                        0.1.8
+  yarl                        1.18.3
+  zipp                        3.19.2
+  ```
+
 
 ### Download the Geo-SAM2 Plugin
 

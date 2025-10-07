@@ -1,22 +1,22 @@
 # <p align=center>Geo-SAM2: Interactive Remote Sensing Segmentation Tool Based on Segment Anything Model 2</p>
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-- [Geo-SAM2: Interactive Remote Sensing Segmentation Tool Based on Segment Anything Model 2](#geo-sam2-interactive-remote-sensing-segmentation-tool-based-on-segment-anything-model-2)
-  - [Introduction](#introduction)
-  - [Installation and Usage](#installation-and-usage)
-  - [Demo](#demo)
-  - [Highlights](#highlights)
-  - [Key Differences Between Geo-SAM2 and Geo-SAM](#key-differences-between-geo-sam2-and-geo-sam)
-  - [Notes](#notes)
-  - [Citation](#citation)
-  - [Acknowledgement](#acknowledgement)
+# Contents
+- [Introduction](#introduction)
+- [Installation and Usage](#installation-and-usage)
+- [Demo](#demo)
+- [Highlights](#highlights)
+- [Key Differences Between Geo-SAM2 and Geo-SAM](#key-differences-between-geo-sam2-and-geo-sam)
+- [Notes](#notes)
+- [Citation](#citation)
+- [Acknowledgement](#acknowledgement)
 
 
 ## Introduction
 
-**Geo-SAM2** is the QGIS plugin for interactive geospatial image segmentation, developed by [wenhwu](https://github.com/wenhwu) and [wm-Githuber](https://github.com/wm-Githuber), and built upon the [**Segment Anything Model 2 (SAM2)**](https://github.com/facebookresearch/sam2) architecture. Like its predecessor [**Geo-SAM**](https://github.com/coolzhao/Geo-SAM), it decouples the computationally intensive image encoding step from the lightweight prompt-based inference, enabling **real-time or near real-time segmentation** even on modest hardware.
+**Geo-SAM2** is the QGIS plugin for interactive geospatial image segmentation, developed by [wenhwu](https://github.com/wenhwu) and [wm-Githuber](https://github.com/wm-Githuber), and built upon the [Segment Anything Model 2 (SAM2)](https://github.com/facebookresearch/sam2) architecture. Like its predecessor [**Geo-SAM**](https://github.com/coolzhao/Geo-SAM), it decouples the computationally intensive image encoding step from the lightweight prompt-based inference, enabling real-time or near real-time segmentation even on modest hardware.
 
-However, Geo-SAM2 leverages the [**Hiera**](https://arxiv.org/abs/2306.00989) backbone of SAM2, which provides enhanced feature representation, multi-scale high-resolution features, and improved mask quality—especially for complex or fine-grained landforms in remote sensing imagery.
+However, Geo-SAM2 leverages the [Hiera](https://arxiv.org/abs/2306.00989) backbone of SAM2, which provides enhanced feature representation, multi-scale high-resolution features, and improved mask quality—especially for complex or fine-grained landforms in remote sensing imagery.
 
 The plugin retains the two-part workflow:
 1. **Image Encoding Part**: Preprocesses and saves SAM2 image features (including `image_embed` and `high_res_feats`) to disk.
@@ -97,8 +97,8 @@ If you find this project useful in your research, please consider citing:
 ## Acknowledgement
 
 This work builds upon:
-- [**Geo-SAM**](https://github.com/coolzhao/Geo-SAM) by [Zhuoyi Zhao](https://github.com/coolzhao/) and [Chengyan Fan](https://github.com/Fanchengyan) from [Cryosphere Lab](https://cryocuhk.github.io/), ESSC, CUHK;
-- [**Segment Anything Model (SAM)**](https://github.com/facebookresearch/segment-anything) and [**SAM2**](https://github.com/facebookresearch/sam2) by Meta AI;
-- [**QGIS**](https://github.com/qgis/QGIS) for the powerful, open-source GIS platform.
+- [Geo-SAM](https://github.com/coolzhao/Geo-SAM) by [Zhuoyi Zhao](https://github.com/coolzhao/) and [Chengyan Fan](https://github.com/Fanchengyan) from [Cryosphere Lab](https://cryocuhk.github.io/), ESSC, CUHK;
+- [SAM](https://github.com/facebookresearch/segment-anything) and [SAM2](https://github.com/facebookresearch/sam2) by Meta AI;
+- [QGIS](https://github.com/qgis/QGIS) for the powerful, open-source GIS platform.
 
 We thank the developers of these projects for their foundational contributions.

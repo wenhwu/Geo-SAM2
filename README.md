@@ -30,7 +30,7 @@ The plugin retains the two-part workflow:
 ## Installation and Usage
 
 - Official Documentation:
-  - [How to install and use?](docs\Installation_and_Usage.md)
+  - [How to install and use?](docs/Installation_and_Usage.md)
 - Tutorials from Geo-SAMs:
   - Referencing Geo-SAM usage, such as: [Segment Anything in QGIS with the Geo-SAM Plugin](https://www.youtube.com/embed/GSKmK7qERUw) - A comprehensive introduction video made by [Prof. Hans van der Kwast](https://www.qwast-gis.com/)
 

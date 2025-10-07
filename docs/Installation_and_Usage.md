@@ -13,7 +13,7 @@
 - [Usage](#usage)
   - [Geo-SAM2 Image Encoder](#geo-sam2-image-encoder)
     - [Download SAM2 Checkpoints](#download-sam2-checkpoints)
-    - [Running the `Geo-SAM2 Image Encoder`](#running-the-geo-sam2-image-encoder)
+    - [Running the Geo-SAM2 Image Encoder](#running-the-geo-sam2-image-encoder)
   - [Geo-SAM2 Interactive Segmentation](#geo-sam2-interactive-segmentation)
 
 
@@ -88,7 +88,7 @@ Before using the encoder, you must download the pre-trained model checkpoints. T
 
 *Note: The `large` model provides higher accuracy but requires more computational resources, while the `tiny` model is faster and less resource-intensive.*
 
-#### Running the `Geo-SAM2 Image Encoder`
+#### Running the Geo-SAM2 Image Encoder
 
 The following animation shows the process of running the image encoder.
 

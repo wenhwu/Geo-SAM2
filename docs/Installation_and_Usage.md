@@ -5,18 +5,16 @@
 
 ## Contents
 
-- [Installation and Usage](#installation-and-usage)
-  - [Contents](#contents)
-  - [Installation](#installation)
-    - [Install QGIS](#install-qgis)
-    - [Download the Geo-SAM2 Plugin](#download-the-geo-sam2-plugin)
-    - [Configure the Plugin Folder](#configure-the-plugin-folder)
-    - [Activate the Geo-SAM2 Plugin](#activate-the-geo-sam2-plugin)
-  - [Usage](#usage)
-    - [Geo-SAM2 Image Encoder](#geo-sam2-image-encoder)
-      - [Download SAM2 Checkpoints](#download-sam2-checkpoints)
-      - [Running the `Geo-SAM2 Image Encoder`](#running-the-geo-sam2-image-encoder)
-    - [Geo-SAM2 Interactive Segmentation](#geo-sam2-interactive-segmentation)
+- [Installation](#installation)
+  - [Install QGIS](#install-qgis)
+  - [Download the Geo-SAM2 Plugin](#download-the-geo-sam2-plugin)
+  - [Configure the Plugin Folder](#configure-the-plugin-folder)
+  - [Activate the Geo-SAM2 Plugin](#activate-the-geo-sam2-plugin)
+- [Usage](#usage)
+  - [Geo-SAM2 Image Encoder](#geo-sam2-image-encoder)
+    - [Download SAM2 Checkpoints](#download-sam2-checkpoints)
+    - [Running the `Geo-SAM2 Image Encoder`](#running-the-geo-sam2-image-encoder)
+  - [Geo-SAM2 Interactive Segmentation](#geo-sam2-interactive-segmentation)
 
 
 ## Installation

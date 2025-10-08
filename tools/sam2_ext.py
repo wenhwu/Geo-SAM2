@@ -1,14 +1,12 @@
 # Modified from sam.build_sam.py
-
-import os
-
-import numpy as np
-
-import torch
-
+from typing import Dict, Any
 from hydra import compose
 from hydra.utils import instantiate
 from omegaconf import OmegaConf
+
+import torch
+import torch.nn as nn
+
 
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 from sam2.modeling.sam2_base import SAM2Base
@@ -65,6 +63,38 @@ def build_sam2_no_encoder(
     model.eval()
     
     return model
+
+
+class FakeNeck(nn.Module):
+    def __init__(self, d_model: int):
+        super().__init__()
+        self.d_model = d_model
+        
+    def forward(self):
+        # This method is not actually called by FakeImageEncoder
+        pass
+
+
+class FakeImageEncoder(nn.Module):
+    """
+    A mock ImageEncoder used when image features are precomputed and
+    the actual encoder is not needed. It mimics the interface of a real encoder.
+    """
+    def __init__(self, neck: nn.Module, img_size: int = 1024) -> None:
+        super().__init__()
+        self.img_size = img_size
+        self.neck = neck
+
+    def forward(self, x: Any) -> Dict[str, Any]:
+        """
+        Mimics the output of a real ImageEncoder.
+        Returns a dict with 'vision_features' as the input tensor.
+        """
+        return {
+            "vision_features": x,
+            "vision_pos_enc": None,
+            "backbone_fpn": None,
+        }
 
 
 class Sam2PredictorNoImgEncoder(SAM2ImagePredictor):
